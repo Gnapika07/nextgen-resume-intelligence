@@ -1,160 +1,270 @@
-# NextGen Resume Intelligence
+#  NextGen Resume Intelligence
 
-An AI-powered Resume Analysis and Candidate Ranking System designed to streamline the recruitment process by intelligently evaluating resumes against job descriptions.
+> **AI-powered Resume Analysis and Candidate Ranking System built using FastAPI, React, PostgreSQL, NLP, and Power BI.**
 
-Developed as a Mini Project at Stanley College of Engineering and Technology for Women.
-
----
-
-## Project Overview
-
-NextGen Resume Intelligence helps recruiters efficiently screen candidates by automating resume analysis, ATS score calculation, skill matching, and candidate ranking.
-
-The system also provides separate interfaces for Students and HR, allowing students to upload and analyze their resumes while enabling HR to evaluate multiple candidates against a specific job description.
+Developed as a **Mini Project** at **Stanley College of Engineering and Technology for Women**.
 
 ---
 
-## Features
+##  Project Overview
 
-### Student Module
-- Secure Login
-- Upload Resume (PDF)
-- Resume Analysis
-- ATS Score Calculation
-- Skill Extraction
-- Resume Feedback
+NextGen Resume Intelligence is an AI-powered recruitment platform that streamlines the hiring process by automatically analyzing resumes against job descriptions.
 
-### HR Module
-- Secure Login
-- Upload Multiple Resumes
-- Upload Job Description
-- Resume Parsing
-- Candidate Ranking
-- Resume Comparison
-- Match Score Calculation
+The application provides separate dashboards for **Students** and **HR Recruiters**.
 
-### Analytics
+Students can upload their resumes and receive an ATS compatibility score along with personalized improvement suggestions, while HR professionals can upload multiple resumes, create job descriptions, compare candidates, and rank applicants based on their suitability for a role.
+
+---
+
+#  Key Features
+
+##  Student Module
+
+-  Secure Login & Authentication
+-  Upload Resume (PDF)
+-  ATS Resume Score (Out of 100)
+-  Resume Skill Extraction
+-  Skill Radar Chart
+-  Resume Improvement Suggestions
+-  Recommended Job Roles
+-  Score Breakdown Analysis
+
+---
+
+##  HR Module
+
+-  Secure Login
+-  Upload Multiple Resumes
+-  Create & Manage Job Descriptions
+-  Resume Parsing
+-  Skill Matching
+-  Candidate Comparison
+-  Candidate Ranking
+-  Export Results to CSV
+
+---
+
+##  Analytics
+
 - PostgreSQL Database
-- Power BI Dashboard for Recruitment Insights
+- Power BI Dashboard
+- Resume Statistics
+- Candidate Ranking Analytics
 
 ---
 
-## Tech Stack
+#  Tech Stack
 
-### Frontend
+## Frontend
+
 - React
 - Vite
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 
-### Backend
+## Backend
+
 - Python
 - FastAPI
+- REST APIs
 
-### Database
+## Database
+
 - PostgreSQL
 
-### Analytics
-- Power BI
+## AI / NLP
 
-### Other Technologies
-- NLP
-- TF-IDF Based Skill Matching
-- REST APIs
+- Resume Parsing
+- Skill Extraction
+- ATS Score Calculation
+- Keyword Matching
+
+## Analytics
+
+- Power BI
 
 ---
 
-## Project Structure
+# Project Structure
 
-```
+```text
 NextGen Resume Intelligence
 │
 ├── backend/
 │   ├── app/
-│   ├── uploads/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── schemas/
+│   │   ├── services/
+│   │   └── utils/
+│   │
 │   ├── requirements.txt
 │   └── run.py
 │
 ├── frontend/
 │
-├── docs/
-│
 ├── screenshots/
 │
-├── .gitignore
-└── README.md
+├── docs/
+│
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## Workflow
+#  Workflow
 
-1. User logs into the system.
-2. Student uploads a resume.
-3. HR uploads one or more resumes along with a Job Description.
-4. The backend parses resumes and extracts relevant information.
-5. Skills are matched against the Job Description.
-6. ATS scores are calculated.
-7. Candidates are ranked based on their matching score.
-8. Recruitment analytics are visualized using Power BI.
+### Student Workflow
+
+1. Register/Login
+2. Upload Resume
+3. Enter Job Description
+4. ATS Score is calculated
+5. Resume is analyzed
+6. Improvement suggestions are generated
+7. Recommended job roles are displayed
 
 ---
 
-## Installation
+### HR Workflow
 
-### Clone Repository
+1. Login
+2. Upload Multiple Resumes
+3. Create Job Description
+4. Resume Parsing
+5. Candidate Comparison
+6. Resume Ranking
+7. Export Results
+
+---
+
+#  Application Screenshots
+
+##  Login Page
+
+![Login Page](screenshots/login-page.png)
+
+---
+
+#  Student Module
+
+### Student Dashboard
+
+![Student Dashboard](screenshots/student-dashboard.png)
+
+### ATS Resume Analysis
+
+![ATS Analysis](screenshots/student-ats-analysis.png)
+
+### Resume Improvement Suggestions
+
+![Recommendations](screenshots/recommendations.png)
+
+---
+
+#  HR Module
+
+### HR Dashboard
+
+![HR Dashboard](screenshots/hr-dashboard.png)
+
+### Resume Upload
+
+![Resume Upload](screenshots/resume-upload.png)
+
+### Job Description Management
+
+![Job Description](screenshots/job-description.png)
+
+### Candidate Ranking
+
+![Candidate Ranking](screenshots/candidate-ranking.png)
+
+---
+
+# Installation
+
+## Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Gnapika07/nextgen-resume-intelligence.git
 ```
 
-### Backend
+---
+
+## Backend Setup
 
 ```bash
 cd backend
+
 pip install -r requirements.txt
+
 python run.py
 ```
 
-### Frontend
+---
+
+## Frontend Setup
 
 ```bash
 cd frontend
+
 npm install
+
 npm run dev
 ```
 
 ---
 
-## Future Improvements
+#  Project Highlights
 
-Version 2.0 will include:
+- AI-powered Resume Analysis
+- ATS Resume Scoring
+- Resume Parsing
+- NLP-based Skill Extraction
+- Candidate Ranking
+- Student Dashboard
+- HR Dashboard
+- Authentication System
+- PostgreSQL Integration
+- Power BI Analytics
+- CSV Export
+
+---
+
+#  Future Improvements
+
+The next version of this project will include:
 
 - Semantic Resume Matching using Sentence Transformers
-- AI-based Resume Recommendations
-- Recruiter Dashboard Enhancements
-- Authentication Improvements
+- AI-powered Resume Recommendations
+- Advanced Recruiter Dashboard
 - Cloud Deployment
 - Docker Support
-- Advanced Analytics
-- Better UI/UX
-- API Documentation
+- CI/CD Pipeline
+- Enhanced Authentication & Authorization
+- Improved UI/UX
+- API Documentation with Swagger
+- Advanced Analytics Dashboard
 
 ---
 
-## Contributors
+#  Contributors
 
-- Gnapika Devarakonda
-- A. Anjana
-- A. Bindu
+- **Devarakonda Gnapika**
+- **A. Anjana**
+- **A. Bindu**
 
-Mini Project submitted to:
+**Mini Project**
 
-**Stanley College of Engineering and Technology for Women**
+Stanley College of Engineering and Technology for Women
 
 ---
 
-## License
+#  License
 
-This project is intended for educational and portfolio purposes.
+This project is developed for educational and portfolio purposes.
+
+---

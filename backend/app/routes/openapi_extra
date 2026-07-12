@@ -1,0 +1,26 @@
+@router.post(
+    "/upload-resumes",
+    response_model=BulkUploadResponse,
+    openapi_extra={
+        "requestBody": {
+            "content": {
+                "multipart/form-data": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "files": {
+                                "type": "array",
+                                "items": {"type": "string", "format": "binary"}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+)
+async def upload_resumes(
+    files: List[UploadFile] = File(...),
+    current_user=Depends(get_hr_user),
+    db: Session = Depends(get_db)
+):

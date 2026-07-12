@@ -144,7 +144,7 @@ NextGen Resume Intelligence
 
 ##  Login Page
 
-![Login.Page](screenshots/login-page.png)
+![Login Page](screenshots/login-page.png)
 
 ---
 
